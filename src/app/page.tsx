@@ -3,10 +3,8 @@ import ConnectButton from "src/components/ConnectButton";
 import Footer from "src/components/Footer";
 import InstallPrompt from "src/components/InstallPrompt";
 import { useIsStandalone } from "src/hooks/useIsStandalone";
-import { useAccount } from "wagmi";
 
 export default function Page() {
-  const { address } = useAccount();
   const { isStandalone } = useIsStandalone();
 
   return (
