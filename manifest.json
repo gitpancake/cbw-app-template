@@ -1,0 +1,23 @@
+{
+	"name": "TRASH",
+	"short_name": "TRASH",
+	"description": "A Tokenized Circular Economy for Sustainable Fashion.",
+	"icons": [
+		{
+			"src": "/pwa/icon.png",
+			"sizes": "74x74",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/pwa/icon.png",
+			"sizes": "74x74",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	],
+	"background_color": "#FFFFFF",
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "portrait"
+}
