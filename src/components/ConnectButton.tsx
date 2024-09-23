@@ -1,9 +1,12 @@
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import { useState } from "react";
-import AddToHome from "./icons/AddToHome";
-import ShareIcon from "./icons/Share";
+import { useAccount } from "wagmi";
+import LoginButton from "./LoginButton";
+import SignupButton from "./SignupButton";
 
-export default function InstallPrompt() {
+export default function ConnectButton() {
+  const { address } = useAccount();
+
   let [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,20 +19,9 @@ export default function InstallPrompt() {
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
           <DialogPanel className="max-w-lg space-y-8 border bg-white pt-8 px-8 pb-6 rounded-md">
             <DialogTitle className="font-bold">Add to home screen</DialogTitle>
-            <div className="relative -mx-6  overflow-hidden px-6">
-              <ul className="flex flex-col gap-2">
-                <li>
-                  1. Tap the <ShareIcon /> share icon
-                </li>
-                <li>
-                  2. Tap Add to Home Screen <AddToHome />
-                </li>
-              </ul>
-            </div>
-            <div className="flex w-full justify-end">
-              <button className="rounded-md bg-black text-white py-2 px-4" onClick={() => setIsOpen(false)}>
-                Cancel
-              </button>
+            <div className="flex items-center gap-3">
+              <SignupButton />
+              {!address && <LoginButton />}
             </div>
           </DialogPanel>
         </div>

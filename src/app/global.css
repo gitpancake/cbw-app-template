@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animate-slide-up {
+    @apply transform transition-transform duration-300;
+    transform: translateY(100%);
+  }
+  .animate-slide-up.open {
+    transform: translateY(0%);
+  }
+}
+
 :root {
   /* Palette */
   --palette-bg-black: #fff;
@@ -81,5 +91,5 @@ a {
 }
 
 .templateSection > div {
-  max-width: 100%;;
+  max-width: 100%;
 }
