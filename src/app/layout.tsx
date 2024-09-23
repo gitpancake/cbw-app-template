@@ -26,7 +26,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico", // Optional: specify icons if needed
   },
-  manifest: "/manifest.json", // Link to your PWA manifest
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
