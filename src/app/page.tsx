@@ -1,7 +1,5 @@
 "use client";
 import Footer from "src/components/Footer";
-import InstallPrompt from "src/components/InstallPrompt";
-import PushNotificationManager from "src/components/PushNotificationManager";
 import TransactionWrapper from "src/components/TransactionWrapper";
 import WalletWrapper from "src/components/WalletWrapper";
 import { useAccount } from "wagmi";
@@ -21,8 +19,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <InstallPrompt />
-      <PushNotificationManager />
       <section className="templateSection flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-gray-100 px-2 py-4 md:grow">
         {address ? <TransactionWrapper address={address} /> : <WalletWrapper className="w-[450px] max-w-full" text="Sign in to transact" />}
       </section>
