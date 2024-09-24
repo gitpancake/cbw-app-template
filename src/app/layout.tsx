@@ -19,10 +19,6 @@ export const metadata: Metadata = {
     description: "A Tokenized Circular Economy for Sustainable Fashion.",
     images: [`${NEXT_PUBLIC_URL}/vibes/vibes-19.png`],
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1.0,
-  },
   icons: {
     icon: "/favicon.ico", // Optional: specify icons if needed
   },
